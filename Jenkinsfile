@@ -15,13 +15,13 @@ pipeline {
         
         stage('Build Backend') {
             steps {
-                sh 'mvn clean package -DskipTests'
+                bat 'mvn clean package -DskipTests'
             }
         }
         
         stage('Test Backend') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
         
@@ -44,4 +44,4 @@ pipeline {
             echo 'Build failed!'
         }
     }
-} 
+}
